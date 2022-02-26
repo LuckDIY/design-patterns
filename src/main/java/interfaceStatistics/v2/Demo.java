@@ -1,6 +1,8 @@
 package interfaceStatistics.v2;
 
+import interfaceStatistics.UserController;
 import interfaceStatistics.v2.collect.MetricsCollector;
+import interfaceStatistics.v2.collect.MetricsCollectorProxy;
 import interfaceStatistics.v2.collect.RequestInfo;
 import interfaceStatistics.v2.output.ConsoleReporter;
 import interfaceStatistics.v2.output.EmailReporter;
@@ -31,5 +33,13 @@ public class Demo {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
+
+
+
+
+    //
+    //MetricsCollectorProxy使用举例
+    MetricsCollectorProxy proxy = new MetricsCollectorProxy();
+    //IUserController userController = (IUserController) proxy.createProxy(new UserController());
   }
 }
